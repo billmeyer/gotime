@@ -60,15 +60,15 @@ func main() {
 
 	// Local Time Now in Unix Timestamp format
 	tUnix := tNow.Unix()
-	fmt.Println("Unix.Time:\t", tUnix)
+	fmt.Println("Unix.Time:      ", tUnix)
 
 	// Local Time Now from unix timestamp
 	tLocal := time.Unix(tUnix, 0)
-	fmt.Println("Time.Local:\t", tLocal)
+	fmt.Println("Time.Local:     ", tLocal)
 
 	// UTC Time from unix timestamp
 	tUtc := time.Unix(tUnix, 0).UTC()
-	fmt.Println("Time.UTC:\t", tUtc)
+	fmt.Println("Time.UTC:       ", tUtc)
 
 	// Location Source: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 	fmt.Println(Cyan("\nLocal Time For A Specific Zone"))
@@ -92,29 +92,29 @@ func main() {
 	hawaii, e := time.LoadLocation("US/Hawaii")
 	CheckError(e)
 
-	fmt.Println("US/Eastern:\t", tNow.In(eastern))
-	fmt.Println("US/Central:\t", tNow.In(central))
-	fmt.Println("US/Mountain:\t", tNow.In(mountain))
-	fmt.Println("US/Pacific:\t", tNow.In(pacific))
-	fmt.Println("US/Alaska:\t", tNow.In(alaska))
-	fmt.Println("US/Hawaii:\t", tNow.In(hawaii))
+	fmt.Println("US/Eastern:     ", tNow.In(eastern))
+	fmt.Println("US/Central:     ", tNow.In(central))
+	fmt.Println("US/Mountain:    ", tNow.In(mountain))
+	fmt.Println("US/Pacific:     ", tNow.In(pacific))
+	fmt.Println("US/Alaska:      ", tNow.In(alaska))
+	fmt.Println("US/Hawaii:      ", tNow.In(hawaii))
 	/*
 	   Goloang Time Format Examples
 	*/
 	fmt.Println(Cyan("\nGolang Time Package Format Examples"))
 	fmt.Println(strings.Repeat("-", 55))
-	fmt.Println("ANSIC:  \t", tNow.Format(time.ANSIC))
-	fmt.Println("UnixDate:\t", tNow.Format(time.UnixDate))
-	fmt.Println("RubyDate:\t", tNow.Format(time.RubyDate))
-	fmt.Println("RFC822:  \t", tNow.Format(time.RFC822))
-	fmt.Println("RFC822Z:  \t", tNow.Format(time.RFC822Z))
-	fmt.Println("RFC850:  \t", tNow.Format(time.RFC850))
-	fmt.Println("RFC1123:  \t", tNow.Format(time.RFC1123))
-	fmt.Println("RFC1123Z:  \t", tNow.Format(time.RFC1123Z))
-	fmt.Println("RFC3339:  \t", tNow.Format(time.RFC3339))
-	fmt.Println("Kitchen:    \t", tNow.Format(time.Kitchen))
-	fmt.Println("StampMicro:\t", tNow.Format(time.StampMicro))
-	fmt.Println("StampMilli:\t", tNow.Format(time.StampMilli))
-	fmt.Println("StampNano:\t", tNow.Format(time.StampNano))
+	fmt.Println("ANSIC:          ", tNow.Format(time.ANSIC))
+	fmt.Println("UnixDate:       ", tNow.Format(time.UnixDate))
+	fmt.Println("RubyDate:       ", tNow.Format(time.RubyDate))
+	fmt.Println("RFC822:         ", tNow.Format(time.RFC822))
+	fmt.Println("RFC822Z:        ", tNow.Format(time.RFC822Z))
+	fmt.Println("RFC850:         ", tNow.Format(time.RFC850))
+	fmt.Println("RFC1123:        ", tNow.Format(time.RFC1123))
+	fmt.Println("RFC1123Z:       ", tNow.Format(time.RFC1123Z))
+	fmt.Println("RFC3339:        ", tNow.Format(time.RFC3339))
+	fmt.Println("Kitchen:        ", tNow.Format(time.Kitchen))
+	fmt.Println("StampMicro:     ", tNow.Format(time.StampMicro))
+	fmt.Println("StampMilli:     ", tNow.Format(time.StampMilli))
+	fmt.Println("StampNano:      ", tNow.Format(time.StampNano))
 	fmt.Println()
 }
